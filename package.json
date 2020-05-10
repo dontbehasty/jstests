@@ -1,0 +1,23 @@
+{
+  "name": "supertest-demo",
+  "version": "1.0.0",
+  "description": "SuperTest Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --reporter mochawesome"
+  },
+  "keywords": [
+    "API",
+    "Testing",
+    "SuperTest",
+    "REST"
+  ],
+  "author": "JG",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0",
+    "supertest": "^4.0.2"
+  }
+}

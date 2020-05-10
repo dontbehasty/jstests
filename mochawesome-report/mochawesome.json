@@ -1,0 +1,253 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-05-10T19:08:24.606Z",
+    "end": "2020-05-10T19:08:25.021Z",
+    "duration": 415,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "961452ec-70d4-4933-89d6-5c06de891776",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6b841a7d-8e60-413d-8891-6ffa27896c2c",
+          "title": "First Request to Get Users",
+          "fullFile": "/Users/jennygow/Documents/Coding/Testing/supertest-demo/test/list_users.js",
+          "file": "/test/list_users.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "See Response",
+              "fullTitle": "First Request to Get Users See Response",
+              "timedOut": false,
+              "duration": 191,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "res = await baseURL.get(list_users); //Sending the GET request\nconsole.log(res.body);",
+              "err": {},
+              "uuid": "d3d06bde-6316-4903-be84-29bfb80fd9c3",
+              "parentUUID": "6b841a7d-8e60-413d-8891-6ffa27896c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checks that the response was OK",
+              "fullTitle": "First Request to Get Users checks that the response was OK",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await (expect(res.status).to.equal(200));",
+              "err": {},
+              "uuid": "d9f54c3e-9c5a-4c22-9d86-20ec0e881e9f",
+              "parentUUID": "6b841a7d-8e60-413d-8891-6ffa27896c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "asserts the various attributes",
+              "fullTitle": "First Request to Get Users asserts the various attributes",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await(expect(res.body.page).to.equal(2));",
+              "err": {},
+              "uuid": "80cfb973-f132-4a6f-afe8-8962895d204c",
+              "parentUUID": "6b841a7d-8e60-413d-8891-6ffa27896c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checks that the data is an array",
+              "fullTitle": "First Request to Get Users checks that the data is an array",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await (expect(res.body.data).to.be.an('array'));",
+              "err": {},
+              "uuid": "8632517b-11f6-4df8-9d95-1b2372b2dd2e",
+              "parentUUID": "6b841a7d-8e60-413d-8891-6ffa27896c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "prints length of data array",
+              "fullTitle": "First Request to Get Users prints length of data array",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await (console.log(res.body.data.length));",
+              "err": {},
+              "uuid": "cf94dde3-9b48-4740-8b29-e6c19e28b9b8",
+              "parentUUID": "6b841a7d-8e60-413d-8891-6ffa27896c2c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "gets the id from the array",
+              "fullTitle": "First Request to Get Users gets the id from the array",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "for(let i=0;i<res.body.data.length;i++){\n   await(console.log(res.body.data[i].id));\n   await (console.log(res.body.data[i].first_name));\n}",
+              "err": {},
+              "uuid": "402ab829-1d74-4b66-96a7-9d22da2252b0",
+              "parentUUID": "6b841a7d-8e60-413d-8891-6ffa27896c2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d3d06bde-6316-4903-be84-29bfb80fd9c3",
+            "d9f54c3e-9c5a-4c22-9d86-20ec0e881e9f",
+            "80cfb973-f132-4a6f-afe8-8962895d204c",
+            "8632517b-11f6-4df8-9d95-1b2372b2dd2e",
+            "cf94dde3-9b48-4740-8b29-e6c19e28b9b8",
+            "402ab829-1d74-4b66-96a7-9d22da2252b0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2b6ce507-23cc-4b15-aeb7-3b5c15a0ca9e",
+          "title": "Get Single User",
+          "fullFile": "/Users/jennygow/Documents/Coding/Testing/supertest-demo/test/list_users2.js",
+          "file": "/test/list_users2.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checks that the response was OK",
+              "fullTitle": "Get Single User checks that the response was OK",
+              "timedOut": false,
+              "duration": 108,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request\n    .get(get_user)\n    .expect(200, done);",
+              "err": {},
+              "uuid": "0b9b4f8a-0022-4828-8eb1-e338b2699636",
+              "parentUUID": "2b6ce507-23cc-4b15-aeb7-3b5c15a0ca9e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checks email is correct",
+              "fullTitle": "Get Single User checks email is correct",
+              "timedOut": false,
+              "duration": 107,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "request\n    .get(get_user)\n    .end(function(err, result) {\n        assert.equal(result.body.data.email, 'janet.weaver@reqres.in');\n        done();       \n    });",
+              "err": {},
+              "uuid": "130acc69-1348-494f-8f3c-46a0cf26086f",
+              "parentUUID": "2b6ce507-23cc-4b15-aeb7-3b5c15a0ca9e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b9b4f8a-0022-4828-8eb1-e338b2699636",
+            "130acc69-1348-494f-8f3c-46a0cf26086f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 215,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": null,
+      "version": "4.1.0"
+    }
+  }
+}
