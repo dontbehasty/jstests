@@ -1,6 +1,8 @@
+require('dotenv').config();
+const {BASEURL} = process.env
 const supertest = require('supertest');
 
-var request = require('supertest')("https://reqres.in");
+var request = require('supertest')(BASEURL);
 var get_user = "/api/users/2";
 var assert = require('assert');
 
