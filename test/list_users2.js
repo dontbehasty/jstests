@@ -1,5 +1,5 @@
 require('dotenv').config();
-const {BASEURL} = process.env
+const {BASEURL, EMAIL} = process.env
 const supertest = require('supertest');
 
 var request = require('supertest')(BASEURL);
@@ -18,7 +18,7 @@ describe('Get Single User', function() {
         request
             .get(get_user)
             .end(function(err, result) {
-                assert.equal(result.body.data.email, 'janet.weaver@reqres.in');
+                assert.equal(result.body.data.email, EMAIL);
                 done();       
             }); 
     });
