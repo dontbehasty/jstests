@@ -31,7 +31,15 @@ describe('First Request to Get Users',()=>{
     it('gets the id from the array',async()=>{
          for(let i=0;i<res.body.data.length;i++){
             await(console.log(res.body.data[i].id));
+            await (console.log(res.body.data[i].first_name));
          }
     });
+
+    it('gets the id from the array 2',async()=>{
+        for(let i=0;i<res.body.data.length;i++){
+           await(console.log(res.body.data[i].id));
+           await (console.log(res.body.data[i].first_name));
+        }
+   });
 
 });
