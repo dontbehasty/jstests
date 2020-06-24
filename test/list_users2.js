@@ -6,7 +6,7 @@ var request = require('supertest')(BASEURL);
 var get_user = "/api/users/2";
 var assert = require('assert');
 
-describe('Get Single User', function() {
+describe('DEV2 - Get Single User', function() {
     it('checks that the response was OK', function(done) {
         request
             .get(get_user)
